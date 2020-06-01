@@ -33,7 +33,6 @@ export const EVENT_MAP_CENTER_CHANGED = 'gotowhere-lib/EVENT_MAP_CENTER_CHANGED'
 
 /**
  * Registered event listeners
- *
  */
 export let eventListeners: {
     [key: string]: { (...args: any[]): void }[];
