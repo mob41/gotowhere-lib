@@ -12,14 +12,19 @@ export const EVENT_UI_BACK = 'gotowhere-lib/EVENT_UI_BACK';
 export const EVENT_LOCATION_CHANGE = 'gotowhere-lib/EVENT_LOCATION_CHANGE';
 
 /**
- * Event triggered on device location initialization success
- */
-export const EVENT_LOCATION_SUCCESS = 'gotowhere-lib/EVENT_LOCATION_SUCCESS';
-
-/**
- * Event triggered on device location initialization error
+ * Event triggered on device location error
  */
 export const EVENT_LOCATION_ERROR = 'gotowhere-lib/EVENT_LOCATION_ERROR';
+
+/**
+ * Event triggered on device location request success
+ */
+export const EVENT_REQUEST_LOCATION_SUCCESS = 'gotowhere-lib/EVENT_REQUEST_LOCATION_SUCCESS';
+
+/**
+ * Event triggered on device location request error
+ */
+export const EVENT_REQUEST_LOCATION_ERROR = 'gotowhere-lib/EVENT_REQUEST_LOCATION_ERROR';
 
 /**
  * Event triggered on custom location selected
