@@ -27,7 +27,8 @@ export function getInstance(): AbstractLanguagePlatform | null {
 }
 
 /**
- *  Language platform that handles language translations between different modules. It is made to be abstract as the I/O operations in different OS are platform-dependent.
+ *  Language platform that handles language translations between different modules.
+ *  It is made to be abstract as the I/O operations in different OS are platform-dependent.
  */
 export abstract class AbstractLanguagePlatform {
     private tFunc: TFunction | null = null;
