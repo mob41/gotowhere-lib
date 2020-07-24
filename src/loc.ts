@@ -125,7 +125,7 @@ export abstract class AbstractLocationPlatform {
             .catch((err) => {
                 this.locError = err;
                 this.reportRequestLocationError(err);
-                return err;
+                return Promise.reject(err);
             });
     }
 

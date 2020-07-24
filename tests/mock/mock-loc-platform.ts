@@ -1,12 +1,22 @@
-import { LocationPos, AbstractLocationPlatform } from '../../src/location';
+import { LocationPos, LocationError, AbstractLocationPlatform } from '../../src/loc';
 
 export class MockLocationPlatform extends AbstractLocationPlatform {
+	
+	mockLoc: LocationPos | null = null;
+	
+	mockLocateSuccess: boolean = true;
 
     isLocationSupported(): boolean {
-        throw new Error("Method not implemented.");
+        return true;
     }
 
     protected nativeRequestLocationAccess(): Promise<LocationPos | null> {
-        throw new Error("Method not implemented.");
+        return new Promise((resolve, reject) => {
+			if (this.mockLocateSuccess) {
+				resolve(new LocationPos(1, 2));	
+			} else {
+				reject(new LocationError(1, "Permission denied by user."));
+			}
+		});
     }
 }
